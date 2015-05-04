@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/storytelling_bg"
+    android:splitMotionEvents="false" >
+
+    <RelativeLayout
+        android:id="@+id/story_chart_area_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chart_height"
+        android:layout_alignParentBottom="true" >
+
+        <HorizontalScrollView
+            android:id="@+id/story_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <FrameLayout
+                android:id="@+id/story_frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ubicomp.soberdiary.storytelling.ui.ChartView
+                    android:id="@+id/chartView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </HorizontalScrollView>
+
+        <ubicomp.soberdiary.storytelling.ui.ChartYAxisView
+            android:id="@+id/chartYAxisView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ubicomp.soberdiary.storytelling.ui.ChartLabelView
+            android:id="@+id/chartLabelView"
+            android:layout_width="180dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="39dp" />
+
+        <ubicomp.soberdiary.storytelling.ui.ChartTitleView
+            android:id="@+id/chartTitleView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/story_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/story_chart_area_layout" >
+
+        <RelativeLayout
+            android:id="@+id/story_book_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/story_prev_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/story_page_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/story_storytelling_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/button_storytelling_test"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/story_fb_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="42dp"
+            android:layout_toLeftOf="@+id/story_storytelling_button"
+            android:src="@drawable/button_fb"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/story_stage_message_layout"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.7dp"
+            android:layout_marginTop="40dp"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/story_stage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/storytelling_page_help"
+                android:textColor="@color/page_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/story_stage_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/story_stage"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/lite_orange"
+                android:textScaleX="0.95"
+                android:textSize="38.7dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/story_stage_rate"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="6.7dp"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <ScrollView
+            android:id="@+id/story_quote_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/story_stage_rate"
+            android:scrollbars="none"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:id="@+id/story_quote_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/story_quote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/page_gray"
+                    android:textSize="14dp" />
+
+                <RelativeLayout
+                    android:id="@+id/story_quote_hidden_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hidden_quote_button"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/story_quote_hidden_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/quote_next_message"
+                        android:textColor="@color/page_gray"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/story_quote_hidden_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:layout_toRightOf="@+id/story_quote_hidden_text"
+                        android:src="@drawable/storytelling_quote_button" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

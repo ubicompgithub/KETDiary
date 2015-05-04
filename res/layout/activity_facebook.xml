@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fb_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FacebookActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".FacebookActivity" >
+
+        <RelativeLayout
+            android:id="@+id/fb_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bar_titlebar_bg" >
+
+            <ImageView
+                android:id="@+id/fb_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bar_titlebar_icon" />
+
+            <TextView
+                android:id="@+id/fb_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/fb_logo"
+                android:text="@string/fb_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/large_text_size" />
+
+            <com.facebook.widget.LoginButton
+                xmlns:fb="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/authButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@drawable/fb_login_button"
+                android:textSize="@dimen/large_text_size"
+                fb:confirm_logout="false"
+                fb:login_text="@string/fb_login"
+                fb:logout_text="@string/fb_logout" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/facebook_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/activity_bg" >
+
+            <ScrollView
+                android:id="@+id/facebook_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" >
+
+                <LinearLayout
+                    android:id="@+id/fb_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/fb_input_image_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/fb_image_bg" >
+
+                        <ImageView
+                            android:id="@+id/fb_input_image"
+                            android:layout_width="153dp"
+                            android:layout_height="161dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/fb_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/fb_login_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/fb_login_message"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/normal_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

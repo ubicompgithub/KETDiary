@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedback_box_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:splitMotionEvents="false" >
+
+    <RelativeLayout
+        android:id="@+id/feedback_top_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/feedback_dialog_top" >
+
+        <TextView
+            android:id="@+id/feedback_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="@string/feedback_help"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/normal_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/feedback_bar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/feedback_help"
+            android:layout_marginTop="14dp"
+            >
+
+            <ImageView
+                android:id="@+id/feedback_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/feedback_bar_bg" />
+
+            <ImageView
+                android:id="@+id/feedback_cur_bar_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/progress_bar_start" />
+
+            <ImageView
+                android:id="@+id/feedback_cur_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/feedback_cur_bar_start"
+                android:scaleType="fitXY"
+                android:src="@drawable/progress_bar_inner" />
+
+            <ImageView
+                android:id="@+id/feedback_cur_bar_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/feedback_cur_bar"
+                android:src="@drawable/progress_bar_end" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/feedback_left_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feedback_button_left" >
+
+            <TextView
+                android:id="@+id/feedback_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/done"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:id="@+id/feedback_left_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_rec" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/feedback_right_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feedback_button_right" >
+
+            <TextView
+                android:id="@+id/feedback_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/done"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/normal_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

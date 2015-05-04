@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LockedActivity" >
+
+    <RelativeLayout
+        android:id="@+id/lock_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bar_titlebar_bg" >
+
+        <ImageView
+            android:id="@+id/lock_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bar_titlebar_icon" />
+
+        <TextView
+            android:id="@+id/lock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/lock_logo"
+            android:text="@string/app_name"
+            android:textColor="@color/gray" 
+            android:textSize="@dimen/large_text_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bar_bg_title" >
+
+        <TextView
+            android:id="@+id/lock_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/lock_about"
+            android:textColor="@color/gray" 
+            android:textSize="@dimen/normal_text_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/activity_bg" >
+
+        <TextView
+            android:id="@+id/lock_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lock_message"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="25.3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/text_gray" />
+
+        <LinearLayout
+            android:id="@+id/lock_about_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bar_button"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lock_goto_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:maxLines="2"
+                android:text="@string/about_title"
+                android:textSize="@dimen/large_text_size"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/text_gray" />
+
+            <ImageView
+                android:id="@+id/lock_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:src="@drawable/icon_ok" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

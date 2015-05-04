@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id = "@+id/statistic_month_layout" 
+    >
+
+    <TextView
+        android:id="@+id/statistic_month_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/month_test"
+        android:textSize="@dimen/small_title_size"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="@color/black" />
+    
+    <LinearLayout
+        android:id="@+id/statistic_month_timeblock_label_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/statistic_month_title"
+        />
+    
+	<GridLayout 
+	    android:id = "@+id/statistic_month_block_layout"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:rowCount="4"
+	    android:columnCount="28"
+	    android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+	    android:layout_below="@+id/statistic_month_title"
+	    android:layout_toRightOf="@+id/statistic_month_timeblock_label_layout"
+		 />
+	
+	     <TextView
+            android:id="@+id/statistic_month_0"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="21dp"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_toRightOf="@+id/statistic_month_timeblock_label_layout"
+            android:layout_below="@+id/statistic_month_block_layout"
+            android:textColor="@color/text_gray"
+            android:gravity="center" 
+            />
+      <TextView
+            android:id="@+id/statistic_month_1"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="21dp"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_below="@+id/statistic_month_block_layout"
+            android:textColor="@color/text_gray" 
+            android:gravity="center"
+            android:layout_toRightOf="@+id/statistic_month_0"
+            />
+      <TextView
+            android:id="@+id/statistic_month_2"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="21dp"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_below="@+id/statistic_month_block_layout"
+            android:textColor="@color/text_gray" 
+            android:gravity="center"
+            android:layout_toRightOf="@+id/statistic_month_1"
+            />
+      <TextView
+            android:id="@+id/statistic_month_3"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_below="@+id/statistic_month_block_layout"
+            android:textColor="@color/text_gray" 
+            android:gravity="center"
+            android:layout_toRightOf="@+id/statistic_month_2"
+            />
+	
+	
+	<LinearLayout
+        android:id="@+id/statistic_month_label_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/statistic_month_timeblock_label_layout"
+        android:layout_below="@+id/statistic_month_0"
+        />
+    
+</RelativeLayout>

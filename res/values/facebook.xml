@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">553234151430402</string>
+    <string name="fb_title">分享至臉書</string>
+    <string name="fb_share">分享</string>
+    <string name="fb_message">我有話想分享至臉書：</string>
+    <string name="fb_fail_toast">傳送失敗，請檢查您的網路連線狀況</string>
+    <string name="fb_success_toast">分享成功！</string>
+    <string name="fb_login_message">請點擊右上角\"登入\"鍵\n以分享您所選的歷程至臉書</string>
+    
+    <string name="fb_login">登入</string>
+    <string name="fb_logout">登出</string>
+    <string name="fb_check">確定分享至臉書？</string>
+    <string name="fb_cancel">放棄貼文</string>
+    <string name="fb_ok">確定上傳</string>
+    <string name="fb_privacy">分享對象</string>
+
+    <string name="fb_friend">朋友</string>
+    <string name="fb_self">自己</string>
+    <string-array name="fb_selection">
+        <item>朋友</item>
+        <item>自己</item>
+    </string-array>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subscreen_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test_background" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/quick_info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_title_side_effect"
+                android:textSize="@dimen/normal_title_size"
+                android:textColor="@color/orange" />
+
+            <TextView
+                android:id="@+id/quick_info_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/info_content_side_effect"
+                android:textSize="@dimen/large_text_size"
+                android:textColor="@color/orange" />
+
+            <Button
+                android:id="@+id/subscreen_info_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="下一則"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+
+    
+
+
+
+</RelativeLayout>

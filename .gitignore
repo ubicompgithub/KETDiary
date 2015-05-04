@@ -1,0 +1,10 @@
+project.properties
+gen/
+bin/
+assets/
+.settings/
+.project
+.classpath
+.DS_Store
+assets
+doc

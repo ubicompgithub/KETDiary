@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <TextView
+        android:id="@+id/developer_brac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltage:"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/developer_brac_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_below="@+id/developer_brac"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/developer_ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timestamp:"
+        android:textSize="26sp"
+        android:layout_below="@+id/developer_brac_value"
+        android:textColor="@color/black"
+        />
+     <TextView
+        android:id="@+id/developer_ts_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_below="@+id/developer_ts"
+        android:textColor="@color/black"
+        />
+    
+    
+</RelativeLayout>

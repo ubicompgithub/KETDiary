@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/voice_record_left_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="13"
+            android:background="@drawable/record_bg_left" >
+
+            <TextView
+                android:id="@+id/voice_record_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/voice_main_help"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/large_text_size" />
+
+            <TextView
+                android:id="@+id/voice_record_count_down_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_toRightOf="@+id/voice_record_help"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/large_text_size" />
+
+            <RelativeLayout
+                android:id="@+id/voice_record_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="76dp" >
+
+                <ImageView
+                    android:id="@+id/voice_record_bar_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/record_voice_bar_bg" />
+
+                <ImageView
+                    android:id="@+id/voice_record_bar_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/record_voice_bar_start" />
+
+                <ImageView
+                    android:id="@+id/voice_record_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/voice_record_bar_start"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/record_voice_bar_progress" />
+
+                <ImageView
+                    android:id="@+id/voice_record_bar_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/voice_record_bar"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/record_voice_bar_end" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/voice_record_top_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/voice_record_left_bg"
+                android:background="@drawable/record_button_top" >
+
+                <ImageView
+                    android:id="@+id/voice_record_top_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_rec" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/voice_record_bottom_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/voice_record_top_button"
+                android:layout_toRightOf="@+id/voice_record_left_bg"
+                android:background="@drawable/record_button_bottom" >
+
+                <ImageView
+                    android:id="@+id/voice_record_bottom_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_play" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

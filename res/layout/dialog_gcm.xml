@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/test_question_bg" >
+
+    <TextView
+        android:id="@+id/gcm_alert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_title_size" />
+
+    <ScrollView
+        android:id="@+id/gcm_scroll_view"
+        android:layout_width="220dp"
+        android:layout_height="280dp"
+        android:layout_below="@+id/gcm_alert_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/gcm_text"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/large_text_size" />
+        </FrameLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/gcm_alert_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gcm_scroll_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:padding="10dp"
+        android:text="@string/ok"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/normal_title_size" />
+
+</RelativeLayout>

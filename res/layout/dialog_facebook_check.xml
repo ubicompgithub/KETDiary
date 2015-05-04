@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shadow" >
+
+    <RelativeLayout
+        android:layout_width="232.7dp"
+        android:layout_height="99.3dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_fb_bg"
+        android:splitMotionEvents="false" >
+
+        <TextView
+            android:id="@+id/fb_help"
+            android:layout_width="wrap_content"
+            android:layout_height="52.7dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/fb_check"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/fb_cancel_button"
+            android:layout_width="111.7dp"
+            android:layout_height="41.3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/call_help"
+            android:layout_marginBottom="5.3dp"
+            android:layout_marginLeft="4.7dp"
+            android:gravity="center"
+            android:text="@string/fb_cancel"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/fb_ok_button"
+            android:layout_width="111.7dp"
+            android:layout_height="41.3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/call_help"
+            android:layout_marginBottom="5.3dp"
+            android:layout_marginRight="4.7dp"
+            android:gravity="center"
+            android:text="@string/fb_ok"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/normal_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

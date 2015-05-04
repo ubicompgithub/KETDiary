@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_fragment_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}"
+    android:background="@drawable/test_background" >
+
+
+    <LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical" >
+
+        <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.33" >
+
+            <TextView android:id="@+id/accumulated_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/accumulated_time"
+                android:textSize="@dimen/small_title_size"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:id="@+id/information_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/information_button"
+                android:contentDescription="@string/content_description_iv_information_button" />
+
+            
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_start_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33" >
+
+            <FrameLayout
+                android:id="@+id/camera_loc"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_centerInParent="true" >
+                <ImageView
+	                android:id="@+id/test_camera_mask"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:src="@drawable/test_camera_mask"
+	                android:scaleType="fitXY"
+	                android:layout_gravity="center" />
+            </FrameLayout>
+            
+            <ImageView
+                android:id="@+id/start_button_progress_bar_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/test_progress_bg"
+                android:scaleType="centerInside" />
+            
+            <ImageView
+                android:id="@+id/start_button_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside" />
+            
+            <ImageView
+                android:id="@+id/start_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/test_start_button_normal"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/content_description_iv_start_button"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/start_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_text"
+                android:layout_centerInParent="true"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:id="@+id/wait_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="15dp"
+                android:background="@drawable/progress_dialog_bg"
+                android:visibility="invisible" >
+                
+                <TextView 
+                    android:id="@+id/progress_waiting"
+                    android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/waiting"
+	                android:layout_weight="0.5"
+	                android:layout_gravity="center_vertical"
+	                android:textSize="20sp" />
+                
+                <ProgressBar
+			        android:id="@+id/progressBar"
+			        android:layout_width="30dp"
+			        android:layout_height="30dp"
+			        android:visibility="visible"
+			        android:layout_gravity="center_vertical"
+			        android:layout_weight="0.5" />
+                
+            </LinearLayout>
+            
+        </RelativeLayout>
+
+        <LinearLayout
+	        android:id="@+id/relativeLayout1"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center"
+	        android:layout_weight="0.33" >
+
+            <TextView
+                android:id="@+id/test_guidance_upper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:text="test_guidance_upper"
+                android:visibility="invisible"
+                android:textSize="@dimen/normal_text_size"
+                android:textColor="@color/orange" />
+            
+            <TextView
+                android:id="@+id/test_guidance_lower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/test_guidance_upper"
+                android:textSize="@dimen/large_title_size"
+                android:textColor="@color/orange" />
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    
+</RelativeLayout>

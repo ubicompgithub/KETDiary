@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/result_fragment_bg"
+        android:padding="20dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/test_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日檢測"
+                android:textStyle="bold"
+                android:textSize="@dimen/normal_title_size"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/test_time_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_月_日"
+                android:textSize="@dimen/normal_title_size"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/test_time_title"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/gray" />
+            
+            <TextView
+                android:id="@+id/test_time_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textSize="@dimen/normal_title_size"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/test_time_date"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/gray" />
+            
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+                
+				
+                <ImageView
+                    android:id="@+id/show_result_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/statistic_day_main_circle_none" />
+
+                <TextView
+                    android:id="@+id/show_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="尚未檢測"
+                    android:textSize="@dimen/large_title_size"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/divide_bar_black"
+            android:layout_marginTop="5dp" />
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等級 16"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="166dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:max="300"
+                    android:progress="250" />
+                <TextView
+	                android:id="@+id/experience_percentage"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:text="83%"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/rank_title_this_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本週排名"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="低"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/rank_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/analysis_rank_bar"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+
+</RelativeLayout>

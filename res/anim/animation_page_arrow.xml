@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true" >
+
+    <alpha
+        android:duration="600"
+        android:fillAfter="true"
+        android:fromAlpha="1"
+        android:interpolator="@android:anim/bounce_interpolator"
+        android:repeatCount="7"
+        android:repeatMode="reverse"
+        android:toAlpha="0" />
+
+    <rotate
+        android:duration="600"
+        android:fillAfter="true"
+        android:fromDegrees="0"
+        android:pivotX="0.5"
+        android:pivotY="0.5"
+        android:startOffset="4800"
+        android:toDegrees="720" />
+
+    <scale
+        android:duration="600"
+        android:fillAfter="true"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="0.5"
+        android:pivotY="0.5"
+        android:startOffset="4800"
+        android:toXScale="0.0"
+        android:toYScale="0.0" />
+
+    <alpha
+        android:duration="600"
+        android:fillAfter="true"
+        android:fromAlpha="1.0"
+        android:interpolator="@android:anim/bounce_interpolator"
+        android:startOffset="4800"
+        android:toAlpha="0.0" />
+
+</set>
